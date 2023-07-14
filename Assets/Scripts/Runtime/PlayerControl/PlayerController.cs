@@ -1,6 +1,8 @@
+using System.Numerics;
 using System.Threading.Tasks;
 using Assets.Scripts.Runtime.Base;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Assets.Scripts.Runtime.PlayerControl
 {
@@ -27,12 +29,26 @@ namespace Assets.Scripts.Runtime.PlayerControl
         
         private void UpdatePosition()
         {
+            // If there is no input, do not move
             if (_playerControl.InputDirection == 0)
                 return;
+        
+            // Calculates the translation step
+            var translationStep = _playerControl.InputDirection * _playerControl.Speed * Time.deltaTime;
+            // Translates the player in the world space
+            _playerControl.SourceTransform.Translate(translationStep, 0, 0, Space.World);
+
+            // Cache the current position
+            var position = _playerControl.SourceTransform.position;
             
-            // Simulates lateral movement
-            var translationStep = Vector3.right * (_playerControl.InputDirection * _playerControl.Speed * Time.deltaTime);
-            _playerControl.SourceTransform.Translate(translationStep);
+            // Clamps the player position to the limits
+            var clampedXPosition = Mathf.Clamp(
+                position.x,
+                -_playerControl.PositionRangeLimit, 
+                _playerControl.PositionRangeLimit);
+    
+            // Makes sure the player is not out of bounds
+            _playerControl.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
         }
     }
 }

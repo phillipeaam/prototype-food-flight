@@ -341,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceTransform: {fileID: 189667588}
+  _positionRangeLimit: 10
   _speed: 20
 --- !u!1 &425805626
 GameObject:

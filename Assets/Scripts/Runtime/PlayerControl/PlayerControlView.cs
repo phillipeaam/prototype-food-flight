@@ -12,6 +12,10 @@ namespace Assets.Scripts.Runtime.PlayerControl
         public Transform SourceTransform => _sourceTransform;
         
         [SerializeField]
+        private float _positionRangeLimit;
+        public float PositionRangeLimit => _positionRangeLimit;
+        
+        [SerializeField]
         private float _speed;
         public float Speed => _speed;
 
