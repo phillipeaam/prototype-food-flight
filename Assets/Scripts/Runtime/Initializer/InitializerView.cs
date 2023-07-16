@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Assets.Scripts.PlayerControl;
 using UnityEngine;
@@ -7,7 +7,8 @@ namespace Assets.Scripts.Initializer
 {
     public class InitializerView : MonoBehaviour, IInitializer
     {
-        [SerializeField] private PlayerControlView _playerControlView;
+        [SerializeField]
+        private PlayerControlView _playerControlView;
         public IPlayerControl PlayerControl => _playerControlView;
 
         private InitializerController _initializerController;

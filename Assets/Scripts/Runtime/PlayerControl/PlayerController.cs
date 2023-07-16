@@ -1,8 +1,6 @@
-using System.Numerics;
 using System.Threading.Tasks;
 using Assets.Scripts.Base;
 using UnityEngine;
-using Vector3 = UnityEngine.Vector3;
 
 namespace Assets.Scripts.PlayerControl
 {
