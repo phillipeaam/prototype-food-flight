@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.jetbrains.riderflow": "2023.1.0-25",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.24",
     "com.unity.textmeshpro": "3.0.6",
@@ -35,5 +36,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "JetBrains",
+      "url": "https://npm.pkg.jetbrains.space/public/p/jetbrains-gamedev/jetbrains-gamedev/",
+      "scopes": [
+        "com.jetbrains"
+      ]
+    }
+  ]
 }
