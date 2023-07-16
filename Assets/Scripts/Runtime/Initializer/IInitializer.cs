@@ -1,6 +1,6 @@
-using Assets.Scripts.Runtime.PlayerControl;
+using Assets.Scripts.PlayerControl;
 
-namespace Assets.Scripts.Runtime.Initializer
+namespace Assets.Scripts.Initializer
 {
     public interface IInitializer
     {

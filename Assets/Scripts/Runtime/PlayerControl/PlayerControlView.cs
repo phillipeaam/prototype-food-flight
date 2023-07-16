@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Assets.Scripts.Runtime.PlayerControl
+namespace Assets.Scripts.PlayerControl
 {
     public class PlayerControlView : MonoBehaviour, IPlayerControl
     {

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assets.Scripts.Runtime.Base;
-using Assets.Scripts.Runtime.PlayerControl;
+using Assets.Scripts.Base;
+using Assets.Scripts.PlayerControl;
 
-namespace Assets.Scripts.Runtime.Initializer
+namespace Assets.Scripts.Initializer
 {
     public class InitializerController : IController
     {

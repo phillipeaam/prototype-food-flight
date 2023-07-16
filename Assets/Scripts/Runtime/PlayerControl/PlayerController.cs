@@ -1,10 +1,10 @@
 using System.Numerics;
 using System.Threading.Tasks;
-using Assets.Scripts.Runtime.Base;
+using Assets.Scripts.Base;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
-namespace Assets.Scripts.Runtime.PlayerControl
+namespace Assets.Scripts.PlayerControl
 {
     public class PlayerController : IController
     {

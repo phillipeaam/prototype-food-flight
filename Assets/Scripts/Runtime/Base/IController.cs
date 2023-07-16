@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Runtime.Base
+namespace Assets.Scripts.Base
 {
     public interface IController
     {

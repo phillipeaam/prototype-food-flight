@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using Assets.Scripts.Runtime.PlayerControl;
+using Assets.Scripts.PlayerControl;
 using UnityEngine;
 
-namespace Assets.Scripts.Runtime.Initializer
+namespace Assets.Scripts.Initializer
 {
     public class InitializerView : MonoBehaviour, IInitializer
     {
