@@ -8,6 +8,10 @@ namespace Assets.Scripts.PlayerControl
         private const string Horizontal = "Horizontal";
         
         [SerializeField]
+        private GameObject _projectilePrefab;
+        public GameObject ProjectilePrefab => _projectilePrefab;
+        
+        [SerializeField]
         private Transform _sourceTransform;
         public Transform SourceTransform => _sourceTransform;
         

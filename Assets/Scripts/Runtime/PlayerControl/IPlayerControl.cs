@@ -5,6 +5,7 @@ namespace Assets.Scripts.PlayerControl
 {
     public interface IPlayerControl
     {
+        public GameObject ProjectilePrefab { get; }
         public Transform SourceTransform { get; }
         public float PositionRangeLimit { get; }
         public float Speed { get; }
