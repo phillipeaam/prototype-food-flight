@@ -1,0 +1,16 @@
+{
+  "92d457c4ec0d54035a85b0736497e4ab": {
+    "sceneGuid": "f0196d95ff9244ffaa65879ba7824fd4",
+    "uniqueCameraId": "92d457c4ec0d54035a85b0736497e4ab",
+    "name": "Back View",
+    "pointX": 3.80773067,
+    "pointY": -11.4340878,
+    "pointZ": 32.57496,
+    "directionX": -0.289988965,
+    "directionY": -0.02382958,
+    "directionZ": 0.00722313952,
+    "directionW": -0.9567045,
+    "zoom": 25.7876282,
+    "cameraMode": 2
+  }
+}
