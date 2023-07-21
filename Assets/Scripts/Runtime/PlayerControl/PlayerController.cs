@@ -16,12 +16,14 @@ namespace Assets.Scripts.PlayerControl
         public Task Initialize()
         {
             _view.OnUpdatePosition += UpdatePosition;
+            _view.OnHandleProjectileLaunch += HandleProjectileLaunch;
             return Task.CompletedTask;
         }
 
         public Task Dispose()
         {
             _view.OnUpdatePosition -= UpdatePosition;
+            _view.OnHandleProjectileLaunch -= HandleProjectileLaunch;
             return Task.CompletedTask;
         }
         
@@ -47,6 +49,14 @@ namespace Assets.Scripts.PlayerControl
     
             // Makes sure the player is not out of bounds
             _view.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
+        }
+        
+        private void HandleProjectileLaunch()
+        {
+            if (!_view.InputFire)
+                return;
+            
+            Object.Instantiate(_view.ProjectilePrefab, _view.SourceTransform.position, Quaternion.identity);
         }
     }
 }

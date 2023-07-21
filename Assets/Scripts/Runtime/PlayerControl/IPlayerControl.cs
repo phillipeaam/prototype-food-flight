@@ -10,7 +10,9 @@ namespace Assets.Scripts.PlayerControl
         public float PositionRangeLimit { get; }
         public float Speed { get; }
         public float InputDirection { get; }
+        public bool InputFire { get; }
 
         public event Action OnUpdatePosition;
+        public event Action OnHandleProjectileLaunch;
     }
 }
