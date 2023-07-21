@@ -6,47 +6,47 @@ namespace Assets.Scripts.PlayerControl
 {
     public class PlayerController : IController
     {
-        private readonly IPlayerControl _playerControl;
+        private readonly IPlayerControl _view;
 
-        public PlayerController(IPlayerControl playerControl)
+        public PlayerController(IPlayerControl view)
         {
-            _playerControl = playerControl;
+            _view = view;
         }
 
         public Task Initialize()
         {
-            _playerControl.OnUpdatePosition += UpdatePosition;
+            _view.OnUpdatePosition += UpdatePosition;
             return Task.CompletedTask;
         }
 
         public Task Dispose()
         {
-            _playerControl.OnUpdatePosition -= UpdatePosition;
+            _view.OnUpdatePosition -= UpdatePosition;
             return Task.CompletedTask;
         }
         
         private void UpdatePosition()
         {
             // If there is no input, do not move
-            if (_playerControl.InputDirection == 0)
+            if (_view.InputDirection == 0)
                 return;
         
             // Calculates the translation step
-            var translationStep = _playerControl.InputDirection * _playerControl.Speed * Time.deltaTime;
+            var translationStep = _view.InputDirection * _view.Speed * Time.deltaTime;
             // Translates the player in the world space
-            _playerControl.SourceTransform.Translate(translationStep, 0, 0, Space.World);
+            _view.SourceTransform.Translate(translationStep, 0, 0, Space.World);
 
             // Cache the current position
-            var position = _playerControl.SourceTransform.position;
+            var position = _view.SourceTransform.position;
             
             // Clamps the player position to the limits
             var clampedXPosition = Mathf.Clamp(
                 position.x,
-                -_playerControl.PositionRangeLimit, 
-                _playerControl.PositionRangeLimit);
+                -_view.PositionRangeLimit, 
+                _view.PositionRangeLimit);
     
             // Makes sure the player is not out of bounds
-            _playerControl.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
+            _view.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
         }
     }
 }
