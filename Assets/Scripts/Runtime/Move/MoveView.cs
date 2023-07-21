@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Move
 {
-    public class MoveView : SelfControlledView<MoveController>, IMove
+    public class MoveView : SelfControlledBehaviour<MoveController>, IMove
     {
         [SerializeField]
         private Transform _sourceTransform;

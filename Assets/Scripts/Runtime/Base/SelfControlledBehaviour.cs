@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Base
 {
-    public class SelfControlledView<T> : MonoBehaviour where T : IController
+    public class SelfControlledBehaviour<T> : MonoBehaviour where T : IController
     {
         protected T Controller { get; set; }
 

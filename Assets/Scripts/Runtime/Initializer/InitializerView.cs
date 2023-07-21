@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Initializer
 {
-    public class InitializerView : SelfControlledView<InitializerController>, IInitializer
+    public class InitializerView : SelfControlledBehaviour<InitializerController>, IInitializer
     {
         [SerializeField]
         private PlayerControlView _playerControlView;
