@@ -10,11 +10,11 @@ namespace Assets.Scripts.Initializer
     {
         private readonly List<IController> _controllers;
         
-        public InitializerController(IInitializer initializer)
+        public InitializerController(IInitializer view)
         {
             _controllers = new()
             {
-                new PlayerController(initializer.PlayerControl)
+                new PlayerController(view.PlayerControl)
             };
         }
 
