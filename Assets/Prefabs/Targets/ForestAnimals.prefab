@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 1276321826634233429}
   - component: {fileID: 6804313726840336134}
   m_Layer: 0
-  m_Name: BaseStag
+  m_Name: ForestAnimals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

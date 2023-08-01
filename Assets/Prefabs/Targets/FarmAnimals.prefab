@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 4205125634786085544}
   - component: {fileID: 8753120725166318878}
   m_Layer: 0
-  m_Name: BaseCow
+  m_Name: FarmAnimals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
