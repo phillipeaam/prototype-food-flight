@@ -7,7 +7,7 @@ namespace Assets.Scripts.Pooler
 {
     public interface IPoolerView
     {
-        public List<PoolModel> Pools { get; }
+        public List<IPoolModel> IPools { get; }
         public Dictionary<IStringReference, Queue<GameObject>> PoolDictionary { get; }
     }
 }

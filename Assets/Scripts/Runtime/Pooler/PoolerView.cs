@@ -9,7 +9,9 @@ namespace Assets.Scripts.Pooler
     {
         [SerializeField]
         private List<PoolModel> _pools;
-        public List<PoolModel> Pools => _pools;
+
+        private List<IPoolModel> _iPools;
+        public List<IPoolModel> IPools => _iPools ??= _pools.ConvertAll(p => (IPoolModel) p);
         
         public Dictionary<IStringReference, Queue<GameObject>> PoolDictionary { get; } = new();
     }
