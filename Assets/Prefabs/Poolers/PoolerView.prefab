@@ -47,13 +47,13 @@ MonoBehaviour:
   _pools:
   - _tag: {fileID: 11400000, guid: 16cf9a62937b34afe890e37b82d3da31, type: 2}
     _prefab: {fileID: 7718521618913613558, guid: 0c30a151e4cb64484a303acdcd61664f, type: 3}
-    _size: 10
+    _size: 5
   - _tag: {fileID: 11400000, guid: ac1fc1d1060d643a0a52dbbcb25034cc, type: 2}
     _prefab: {fileID: 7158532563988316689, guid: e15d5fce70c134760b5d6d9931201b0f, type: 3}
-    _size: 10
+    _size: 8
   - _tag: {fileID: 11400000, guid: 851ca10488c644345994c85f1f8af05a, type: 2}
     _prefab: {fileID: 7456517056976261205, guid: 802491ad9cfd1443cad75c01c6484e9e, type: 3}
-    _size: 10
+    _size: 8
   - _tag: {fileID: 11400000, guid: 62a4c214079284c01b256e5d0f487d26, type: 2}
     _prefab: {fileID: 7166739134812928790, guid: aedb0d79406734db685795fdaf67d1d0, type: 3}
-    _size: 20
+    _size: 10
