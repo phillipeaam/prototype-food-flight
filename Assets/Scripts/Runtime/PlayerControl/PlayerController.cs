@@ -1,12 +1,17 @@
 using System.Threading.Tasks;
 using Assets.Scripts.Base;
 using UnityEngine;
+using static Assets.Scripts.Pooler.Utils.Delegates;
 
 namespace Assets.Scripts.PlayerControl
 {
     public class PlayerController : IController
     {
+        private const string WarningMessage = "The pool with tag \"{0}\" doesn't exist.";
+        
         private readonly IPlayerControlView _view;
+        
+        public event RetrieveInstanceFromPoolDelegate OnRequestInstanceFromPool;
 
         public PlayerController(IPlayerControlView view)
         {
@@ -55,8 +60,12 @@ namespace Assets.Scripts.PlayerControl
         {
             if (!_view.InputFire)
                 return;
+
+            var tag = _view.ProjectileTag;
+            var position = _view.SourceTransform.position;
+            var rotation = Quaternion.identity;
             
-            Object.Instantiate(_view.ProjectilePrefab, _view.SourceTransform.position, Quaternion.identity);
+            OnRequestInstanceFromPool?.Invoke(tag, position, rotation);
         }
     }
 }

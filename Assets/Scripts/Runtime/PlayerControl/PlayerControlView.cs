@@ -1,4 +1,5 @@
 using System;
+using Assets.Scripts.Base;
 using UnityEngine;
 
 namespace Assets.Scripts.PlayerControl
@@ -9,8 +10,8 @@ namespace Assets.Scripts.PlayerControl
         private const string Fire = "Jump";
         
         [SerializeField]
-        private GameObject _projectilePrefab;
-        public GameObject ProjectilePrefab => _projectilePrefab;
+        private StringReference _projectileTag;
+        public IStringReference ProjectileTag => _projectileTag;
         
         [SerializeField]
         private Transform _sourceTransform;

@@ -9,19 +9,27 @@ namespace Assets.Scripts.Initializer
 {
     public class InitializerController : IController
     {
+        private readonly PlayerController _playerController;
+        private readonly PoolerController _poolerController;
+        
         private readonly List<IController> _controllers;
         
         public InitializerController(IInitializerView view)
         {
+            _playerController = new PlayerController(view.PlayerControlView);
+            _poolerController = new PoolerController(view.PoolerView);
+
             _controllers = new()
             {
-                new PlayerController(view.PlayerControlView),
-                new PoolerController(view.PoolerView)
+                _playerController,
+                _poolerController
             };
         }
 
         public async Task Initialize()
         {
+            _playerController.OnRequestInstanceFromPool += _poolerController.SpawnFromPool;
+            
             var tasks = _controllers
                 .Select(x => x.Initialize())
                 .ToArray();
@@ -31,6 +39,8 @@ namespace Assets.Scripts.Initializer
 
         public async Task Dispose()
         {
+            _playerController.OnRequestInstanceFromPool -= _poolerController.SpawnFromPool;
+            
             var tasks = _controllers
                 .Select(x => x.Dispose())
                 .ToArray();

@@ -1,11 +1,12 @@
 using System;
+using Assets.Scripts.Base;
 using UnityEngine;
 
 namespace Assets.Scripts.PlayerControl
 {
     public interface IPlayerControlView
     {
-        public GameObject ProjectilePrefab { get; }
+        public IStringReference ProjectileTag { get; }
         public Transform SourceTransform { get; }
         public float PositionRangeLimit { get; }
         public float Speed { get; }

@@ -56,4 +56,4 @@ MonoBehaviour:
     _size: 8
   - _tag: {fileID: 11400000, guid: 62a4c214079284c01b256e5d0f487d26, type: 2}
     _prefab: {fileID: 7166739134812928790, guid: aedb0d79406734db685795fdaf67d1d0, type: 3}
-    _size: 10
+    _size: 8

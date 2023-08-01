@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       propertyPath: m_Name
-      value: PlayerView Variant
+      value: PlayerView
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bd8a450fcb589542a7843ea7bda2ee6, type: 3}
       propertyPath: m_RootOrder
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4594ae83cde45e1bd23105b221d9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePrefab: {fileID: 7166739134812928790, guid: aedb0d79406734db685795fdaf67d1d0, type: 3}
+  _projectileTag: {fileID: 11400000, guid: 62a4c214079284c01b256e5d0f487d26, type: 2}
   _sourceTransform: {fileID: 2961091333662992613}
   _positionRangeLimit: 10
   _speed: 20
