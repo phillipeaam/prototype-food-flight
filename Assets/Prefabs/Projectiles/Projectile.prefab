@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2820234219662937098}
   - component: {fileID: 1474409860762967856}
   - component: {fileID: 8188664969157629438}
+  - component: {fileID: 5373273380966130203}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2820234219662937098
 MeshFilter:
@@ -99,3 +100,17 @@ MonoBehaviour:
   _sourceTransform: {fileID: 4072182544758853140}
   _speed: 40
   _direction: {x: 0, y: 0, z: 1}
+--- !u!114 &5373273380966130203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166739134812928790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b941088352b431d8073c65bab4c291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _topBound: 35
+  _bottomBound: -15
