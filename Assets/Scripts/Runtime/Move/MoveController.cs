@@ -6,9 +6,9 @@ namespace Assets.Scripts.Move
 {
     public class MoveController : IController
     {
-        private readonly IMove _view;
+        private readonly IMoveView _view;
 
-        public MoveController(IMove view)
+        public MoveController(IMoveView view)
         {
             _view = view;
         }

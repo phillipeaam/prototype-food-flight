@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.PlayerControl
 {
-    public interface IPlayerControl
+    public interface IPlayerControlView
     {
         public GameObject ProjectilePrefab { get; }
         public Transform SourceTransform { get; }

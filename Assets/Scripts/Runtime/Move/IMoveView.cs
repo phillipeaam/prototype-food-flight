@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Move
 {
-    public interface IMove
+    public interface IMoveView
     {
         public Transform SourceTransform { get; }
         public float Speed { get; }

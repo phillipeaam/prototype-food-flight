@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.PlayerControl
 {
-    public class PlayerControlView : MonoBehaviour, IPlayerControl
+    public class PlayerControlView : MonoBehaviour, IPlayerControlView
     {
         private const string Horizontal = "Horizontal";
         private const string Fire = "Jump";

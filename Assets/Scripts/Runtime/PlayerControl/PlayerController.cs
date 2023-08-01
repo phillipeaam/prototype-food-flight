@@ -6,9 +6,9 @@ namespace Assets.Scripts.PlayerControl
 {
     public class PlayerController : IController
     {
-        private readonly IPlayerControl _view;
+        private readonly IPlayerControlView _view;
 
-        public PlayerController(IPlayerControl view)
+        public PlayerController(IPlayerControlView view)
         {
             _view = view;
         }
