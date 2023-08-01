@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3950911664351321923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4785612775018370133}
+  - component: {fileID: 8292242329947027167}
+  m_Layer: 0
+  m_Name: PoolerView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4785612775018370133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950911664351321923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8292242329947027167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950911664351321923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a17485aa6545e288e9d9401f22929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pools:
+  - _tag: {fileID: 11400000, guid: 16cf9a62937b34afe890e37b82d3da31, type: 2}
+    _prefab: {fileID: 7718521618913613558, guid: 0c30a151e4cb64484a303acdcd61664f, type: 3}
+    _size: 10
+  - _tag: {fileID: 11400000, guid: ac1fc1d1060d643a0a52dbbcb25034cc, type: 2}
+    _prefab: {fileID: 7158532563988316689, guid: e15d5fce70c134760b5d6d9931201b0f, type: 3}
+    _size: 10
+  - _tag: {fileID: 11400000, guid: 851ca10488c644345994c85f1f8af05a, type: 2}
+    _prefab: {fileID: 7456517056976261205, guid: 802491ad9cfd1443cad75c01c6484e9e, type: 3}
+    _size: 10
+  - _tag: {fileID: 11400000, guid: 62a4c214079284c01b256e5d0f487d26, type: 2}
+    _prefab: {fileID: 7166739134812928790, guid: aedb0d79406734db685795fdaf67d1d0, type: 3}
+    _size: 20
