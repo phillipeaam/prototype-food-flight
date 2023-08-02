@@ -1747,6 +1747,7 @@ GameObject:
   - component: {fileID: 4300743637892358005}
   - component: {fileID: 4205125634786085544}
   - component: {fileID: 8753120725166318878}
+  - component: {fileID: -2355892757374725763}
   m_Layer: 0
   m_Name: FarmAnimals
   m_TagString: Untagged
@@ -1806,6 +1807,22 @@ MonoBehaviour:
   _sourceTransform: {fileID: 4300743637892358005}
   _speed: 30
   _direction: {x: 0, y: 0, z: 1}
+--- !u!114 &-2355892757374725763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158532563988316689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b941088352b431d8073c65bab4c291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sourceTransform: {fileID: 4300743637892358005}
+  _sourceGameObject: {fileID: 7158532563988316689}
+  _topBound: 35
+  _bottomBound: -15
 --- !u!1 &7421927992127617234
 GameObject:
   m_ObjectHideFlags: 0

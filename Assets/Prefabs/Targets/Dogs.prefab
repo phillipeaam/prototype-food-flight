@@ -5260,6 +5260,7 @@ GameObject:
   - component: {fileID: 4276335407677735932}
   - component: {fileID: 7296016112648358984}
   - component: {fileID: 7822802235125757108}
+  - component: {fileID: 5542376659189088807}
   m_Layer: 0
   m_Name: Dogs
   m_TagString: Untagged
@@ -5355,6 +5356,22 @@ MonoBehaviour:
   _sourceTransform: {fileID: 4276335407677735932}
   _speed: 30
   _direction: {x: 0, y: 0, z: 1}
+--- !u!114 &5542376659189088807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718521618913613558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b941088352b431d8073c65bab4c291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sourceTransform: {fileID: 4276335407677735932}
+  _sourceGameObject: {fileID: 7718521618913613558}
+  _topBound: 35
+  _bottomBound: -15
 --- !u!1 &7741725847382701885
 GameObject:
   m_ObjectHideFlags: 0
