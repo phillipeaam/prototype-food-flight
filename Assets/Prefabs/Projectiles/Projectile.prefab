@@ -112,5 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b941088352b431d8073c65bab4c291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sourceTransform: {fileID: 4072182544758853140}
+  _sourceGameObject: {fileID: 7166739134812928790}
   _topBound: 35
   _bottomBound: -15
