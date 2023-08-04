@@ -88,13 +88,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290587401224013462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9029954216208978142}
-  m_RootOrder: 4
+  m_Father: {fileID: 4300743637892358005}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6077481062324720855
 SkinnedMeshRenderer:
@@ -345,13 +345,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958150794423225705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9029954216208978142}
-  m_RootOrder: 3
+  m_Father: {fileID: 4300743637892358005}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &8158305482888313292
 SkinnedMeshRenderer:
@@ -569,13 +569,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2234861438289350044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9029954216208978142}
-  m_RootOrder: 1
+  m_Father: {fileID: 4300743637892358005}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &895197411546041562
 SkinnedMeshRenderer:
@@ -955,10 +955,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2435316196538870035}
-  - {fileID: 195595026474223887}
-  - {fileID: 3912310191537976052}
-  - {fileID: 2001002500338487839}
-  - {fileID: 1606299325026687746}
   m_Father: {fileID: 4300743637892358005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1300,7 +1296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3912310191537976052
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,13 +1304,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4989691936227101706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9029954216208978142}
-  m_RootOrder: 2
+  m_Father: {fileID: 4300743637892358005}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6340960621303242042
 SkinnedMeshRenderer:
@@ -1748,6 +1744,7 @@ GameObject:
   - component: {fileID: 4205125634786085544}
   - component: {fileID: 8753120725166318878}
   - component: {fileID: -2355892757374725763}
+  - component: {fileID: 6269125318640985612}
   m_Layer: 0
   m_Name: FarmAnimals
   m_TagString: Untagged
@@ -1768,6 +1765,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9029954216208978142}
+  - {fileID: 195595026474223887}
+  - {fileID: 3912310191537976052}
+  - {fileID: 2001002500338487839}
+  - {fileID: 1606299325026687746}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1823,6 +1824,23 @@ MonoBehaviour:
   _sourceGameObject: {fileID: 7158532563988316689}
   _topBound: 35
   _bottomBound: -15
+--- !u!114 &6269125318640985612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158532563988316689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f807932d144e27857ad56049f81b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skinGameObjects:
+  - {fileID: 2234861438289350044}
+  - {fileID: 4989691936227101706}
+  - {fileID: 1958150794423225705}
+  - {fileID: 1290587401224013462}
 --- !u!1 &7421927992127617234
 GameObject:
   m_ObjectHideFlags: 0

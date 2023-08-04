@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 1276321826634233429}
   - component: {fileID: 6804313726840336134}
   - component: {fileID: 5045064385834113354}
+  - component: {fileID: 5602199330032743876}
   m_Layer: 0
   m_Name: ForestAnimals
   m_TagString: Untagged
@@ -776,6 +777,29 @@ MonoBehaviour:
   _sourceGameObject: {fileID: 7456517056976261205}
   _topBound: 35
   _bottomBound: -15
+--- !u!114 &5602199330032743876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456517056976261205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f807932d144e27857ad56049f81b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skinGameObjects:
+  - {fileID: 2281837733041595324}
+  - {fileID: 8465083653338534008}
+  - {fileID: 2289253586682652672}
+  - {fileID: 4075977527989205235}
+  - {fileID: 4355936162587301502}
+  - {fileID: 2191578289853188283}
+  - {fileID: 5241218936430814701}
+  - {fileID: 7530564766102495673}
+  - {fileID: 3870888399538231150}
+  - {fileID: 5810579256067326724}
 --- !u!1 &7530564766102495673
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &866837535457512735
 Transform:
   m_ObjectHideFlags: 0
