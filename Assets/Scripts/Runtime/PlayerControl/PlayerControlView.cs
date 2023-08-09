@@ -1,7 +1,5 @@
-using System;
 using Assets.Scripts.Base;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Assets.Scripts.PlayerControl
 {
@@ -9,7 +7,7 @@ namespace Assets.Scripts.PlayerControl
     {
         [SerializeField]
         private InputReader _inputReader;
-        public IInputReader InputReader => _inputReader as IInputReader;
+        public IInputReader InputReader => _inputReader;
         
         [SerializeField]
         private StringReference _projectileTag;
@@ -26,18 +24,10 @@ namespace Assets.Scripts.PlayerControl
         [SerializeField]
         private float _speed;
         public float Speed => _speed;
-        
-        public event Action<float> Move;
 
         protected override void Configure()
         {
             Controller = new PlayerController(this);
-        }
-
-        public void HandleMoveInput(InputAction.CallbackContext context)
-        {
-            var moveAmount = context.ReadValue<float>();
-            Move?.Invoke(moveAmount);
         }
     }
 }

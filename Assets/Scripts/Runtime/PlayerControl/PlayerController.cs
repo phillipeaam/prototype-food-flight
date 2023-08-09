@@ -19,13 +19,15 @@ namespace Assets.Scripts.PlayerControl
 
         public Task Initialize()
         {
-            _view.Move += UpdatePosition;
+            _view.InputReader.MoveEvent += UpdatePosition;
+            _view.InputReader.ActionEvent += HandleProjectileLaunch;
             return Task.CompletedTask;
         }
 
         public Task Dispose()
         {
-            _view.Move -= UpdatePosition;
+            _view.InputReader.MoveEvent -= UpdatePosition;
+            _view.InputReader.ActionEvent -= HandleProjectileLaunch;
             return Task.CompletedTask;
         }
         
@@ -51,11 +53,6 @@ namespace Assets.Scripts.PlayerControl
     
             // Makes sure the player is not out of bounds
             _view.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
-        }
-        
-        private void FireInputPerform(InputAction.CallbackContext context)
-        {
-            HandleProjectileLaunch();
         }
         
         private void HandleProjectileLaunch()

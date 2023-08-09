@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Base.Gameplay
 {
-    //[CreateAssetMenu(fileName = "GameState", menuName = "Gameplay/GameState")]
+    [CreateAssetMenu(fileName = "GameState", menuName = "Gameplay/GameState")]
     public class GameStateSO : DescriptionBaseSO
     {
         public GameState CurrentGameState => _currentGameState;
