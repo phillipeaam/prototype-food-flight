@@ -1,14 +1,13 @@
 using System.Threading.Tasks;
 using Assets.Scripts.Base;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static Assets.Scripts.Pooler.Utils.Delegates;
 
 namespace Assets.Scripts.PlayerControl
 {
     public class PlayerController : IController
     {
-        private const string WarningMessage = "The pool with tag \"{0}\" doesn't exist.";
-        
         private readonly IPlayerControlView _view;
         
         public event RetrieveInstanceFromPoolDelegate OnRequestInstanceFromPool;
@@ -20,26 +19,24 @@ namespace Assets.Scripts.PlayerControl
 
         public Task Initialize()
         {
-            _view.OnUpdatePosition += UpdatePosition;
-            _view.OnHandleProjectileLaunch += HandleProjectileLaunch;
+            _view.Move += UpdatePosition;
             return Task.CompletedTask;
         }
 
         public Task Dispose()
         {
-            _view.OnUpdatePosition -= UpdatePosition;
-            _view.OnHandleProjectileLaunch -= HandleProjectileLaunch;
+            _view.Move -= UpdatePosition;
             return Task.CompletedTask;
         }
         
-        private void UpdatePosition()
+        private void UpdatePosition(float horizontalInput)
         {
             // If there is no input, do not move
-            if (_view.InputDirection == 0)
+            if (horizontalInput == 0)
                 return;
         
             // Calculates the translation step
-            var translationStep = _view.InputDirection * _view.Speed * Time.deltaTime;
+            var translationStep = horizontalInput * _view.Speed * Time.deltaTime;
             // Translates the player in the world space
             _view.SourceTransform.Translate(translationStep, 0, 0, Space.World);
 
@@ -56,11 +53,13 @@ namespace Assets.Scripts.PlayerControl
             _view.SourceTransform.position = new Vector3(clampedXPosition, position.y, position.z);
         }
         
+        private void FireInputPerform(InputAction.CallbackContext context)
+        {
+            HandleProjectileLaunch();
+        }
+        
         private void HandleProjectileLaunch()
         {
-            if (!_view.InputFire)
-                return;
-
             var tag = _view.ProjectileTag;
             var position = _view.SourceTransform.position;
             var rotation = Quaternion.identity;

@@ -1,13 +1,15 @@
 using System;
 using Assets.Scripts.Base;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Assets.Scripts.PlayerControl
 {
-    public class PlayerControlView : MonoBehaviour, IPlayerControlView
+    public class PlayerControlView : SelfControlledBehaviour<PlayerController>, IPlayerControlView
     {
-        private const string Horizontal = "Horizontal";
-        private const string Fire = "Jump";
+        [SerializeField]
+        private InputReader _inputReader;
+        public IInputReader InputReader => _inputReader as IInputReader;
         
         [SerializeField]
         private StringReference _projectileTag;
@@ -24,24 +26,18 @@ namespace Assets.Scripts.PlayerControl
         [SerializeField]
         private float _speed;
         public float Speed => _speed;
-
-        public float InputDirection { get; private set; }
-        public bool InputFire { get; private set; }
         
-        public event Action OnUpdatePosition;
-        public event Action OnHandleProjectileLaunch;
+        public event Action<float> Move;
 
-        private void Update()
+        protected override void Configure()
         {
-            RegisterInput();
-            OnUpdatePosition?.Invoke();
-            OnHandleProjectileLaunch?.Invoke();
+            Controller = new PlayerController(this);
         }
 
-        private void RegisterInput()
+        public void HandleMoveInput(InputAction.CallbackContext context)
         {
-            InputDirection = Input.GetAxis(Horizontal);
-            InputFire = Input.GetButtonDown(Fire);
+            var moveAmount = context.ReadValue<float>();
+            Move?.Invoke(moveAmount);
         }
     }
 }
